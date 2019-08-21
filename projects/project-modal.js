@@ -7,11 +7,16 @@ module.exports = {
 add,findBy
 };
 
-
-
+function find() {
+  return db('users').select('id','username');
+}
 function findBy(filter) {
   return db('users').where(filter);
 }
+
+
+
+
 
 
 function add(item) {
